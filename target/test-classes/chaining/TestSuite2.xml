@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ChainingTestSuit">
+	<!-- This parameter will be passed to every test in this suite -->
+	<parameter name="appBaseURI" value="https://gorest.co.in/" />
+	<parameter name="token" value="577666251029173162313036de9d315c4aceb5c951f444f75938f7f209c53718" />	
+	
+	<test thread-count="5" name="Test_CreateUser">
+		<classes>
+			<class name="chaining.CreateUser" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Test_GetUser">
+		<classes>
+			<class name="chaining.GetUser" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Test_UpdateUser">
+		<classes>
+			<class name="chaining.UpdateUser" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test thread-count="5" name="Test_DeleteUser">
+		<classes>
+			<class name="chaining.DeleteUser" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- ChainingTestSuit -->
